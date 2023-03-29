@@ -1,0 +1,8 @@
+aws dynamodb create-table \
+    --table-name TTLDemoDynamoDB \
+    --attribute-definitions \
+        AttributeName=EmpID,AttributeType=N \
+        AttributeName=EmpName,AttributeType=S \
+    --key-schema ttributeName=EmpID,KeyType=HASH  AttributeName=EmpName,KeyType=RANGE \
+    --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
+    --table-class STANDARD
