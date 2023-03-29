@@ -6,5 +6,5 @@ do
 
         echo $epocDate + $EmpID + $EmpName
         sleep 1
-        aws dynamodb put-item --table-name SMTestDynamoDB --item '{"EmpID":{"N":"'$EmpID'"}, "EmpName":{"S":"'$EmpName'"}, "TTL":{"N":"'$epocDate'"}}'
+        aws dynamodb put-item --table-name TTLDemoDynamoDB --item '{"EmpID":{"N":"'$EmpID'"}, "EmpName":{"S":"'$EmpName'"}, "TTL":{"N":"'$epocDate'"}}'
 done
